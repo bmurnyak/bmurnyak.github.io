@@ -10,7 +10,7 @@
     header { position: relative; overflow: hidden; color: white; background: linear-gradient(135deg, #071428 0%, #0d2847 50%, #0b2e2a 100%); }
     .header-banner { width: 100%; height: 300px; object-fit: cover; object-position: center; display: block; opacity: 0.92; }
     .header-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(7,20,40,0.95) 0%, rgba(7,20,40,0.6) 60%, transparent 100%); padding: 32px 40px 28px; display: flex; align-items: flex-end; gap: 28px; }
-    .header-photo { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #1D9E75; object-fit: cover; flex-shrink: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-position: center top}
+    .header-photo { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #1D9E75; object-fit: cover; flex-shrink: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-position: center top; }
     .header-text h1 { font-size: 2.2em; font-weight: 700; line-height: 1.1; }
     .header-text h2 { font-size: 1.05em; color: #7bbfea; font-weight: 400; margin-top: 4px; }
     .header-tags { margin-top: 10px; }
@@ -21,7 +21,7 @@
     nav { background: #0d2847; padding: 0 40px; text-align: center; position: sticky; top: 0; z-index: 100; }
     nav a { color: #7bbfea; text-decoration: none; padding: 14px 20px; display: inline-block; font-size: 0.9em; transition: color 0.2s; }
     nav a:hover { color: white; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
     section { padding: 60px 0; }
     section:nth-child(even) { background: white; }
     h3 { font-size: 1.6em; color: #0d2847; margin-bottom: 24px; padding-bottom: 10px; border-bottom: 3px solid #1D9E75; display: inline-block; }
@@ -29,7 +29,7 @@
     .stat { background: #f0f7ff; border-radius: 12px; padding: 24px; text-align: center; border-top: 4px solid #185FA5; }
     .stat .number { font-size: 2.2em; font-weight: 700; color: #185FA5; }
     .stat .label { font-size: 0.85em; color: #666; margin-top: 6px; }
-    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); gap: 24px; margin-top: 24px; }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 24px; }
     .project-card { background: white; border-radius: 12px; padding: 28px; border: 1px solid #e0e8f0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
     .project-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
     .project-card h4 { font-size: 1.15em; color: #0d2847; margin-bottom: 8px; }
@@ -96,15 +96,16 @@
       <div class="stat"><div class="number">12</div><div class="label">h-index</div></div>
       <div class="stat"><div class="number">16</div><div class="label">i10-index</div></div>
       <div class="stat"><div class="number">8+</div><div class="label">Years experience</div></div>
-      <div class="stat"><div class="number">2</div><div class="label">Open-source tools</div></div>
+      <div class="stat"><div class="number">3</div><div class="label">Open-source tools</div></div>
     </div>
   </div>
 </section>
 
 <section id="projects" style="background:#f8faff;">
   <div class="container">
-    <h3>Portfolio Projects</h3>
+    <h3>Projects</h3>
     <div class="project-grid">
+
       <div class="project-card">
         <h4>Glioma Methylation Pipeline</h4>
         <div class="subtitle">Cancer Epigenomics · Python · TCGA · Survival Analysis</div>
@@ -115,6 +116,7 @@
         <div class="finding">PARP2, PARG, CD274 predict LGG survival (all p&lt;0.01)</div>
         <a href="https://github.com/bmurnyak/glioma-meth-pipeline" target="_blank" class="project-link">View on GitHub →</a>
       </div>
+
       <div class="project-card">
         <h4>Somatic Variant Annotator</h4>
         <div class="subtitle">Clinical Genomics · VCF Annotation · ACMG/AMP · HTML Reports</div>
@@ -125,6 +127,18 @@
         <div class="finding">Interactive HTML clinical report output</div>
         <a href="https://github.com/bmurnyak/somatic-variant-annotator" target="_blank" class="project-link">View on GitHub →</a>
       </div>
+
+      <div class="project-card">
+        <h4>Methylation Tissue Classifier</h4>
+        <div class="subtitle">Epigenomics · Machine Learning · 25-Gene Panel · 6 Cancer Types</div>
+        <p>Literature-curated 25-gene methylation panel for tissue-of-origin classification across 6 cancer types (TCGA, n=30). Demonstrates the epigenomic foundation of liquid biopsy diagnostics.</p>
+        <div class="finding">13/25 genes significantly tissue-specific (FDR&lt;0.05)</div>
+        <div class="finding">COAD and LAML perfectly classified (5/5 each)</div>
+        <div class="finding">Random forest LOO-CV accuracy: 60% (pilot, n=5 per type)</div>
+        <div class="finding">PCA, correlation heatmap, interactive HTML report</div>
+        <a href="https://github.com/bmurnyak/methylation-tissue-classifier" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -133,7 +147,7 @@
   <div class="container">
     <h3>Skills</h3>
     <div class="skills-grid">
-      <div class="skill-group"><h4>Languages</h4><p>Python (pandas, scipy, cyvcf2, lifelines, matplotlib)<br>R · Unix/Linux · bash</p></div>
+      <div class="skill-group"><h4>Languages</h4><p>Python (pandas, scipy, cyvcf2, lifelines, matplotlib, scikit-learn)<br>R · Unix/Linux · bash</p></div>
       <div class="skill-group"><h4>Genomics tools</h4><p>GATK · samtools · bcftools · MethylDackel · Snakemake · SLURM/HPC</p></div>
       <div class="skill-group"><h4>NGS workflows</h4><p>Illumina · Oxford Nanopore · 10x Genomics · WGBS · scRNA-seq · Long-read</p></div>
       <div class="skill-group"><h4>Variant analysis</h4><p>VCF annotation · ACMG/AMP classification · ClinVar · OncoKB · gnomAD</p></div>
@@ -152,11 +166,12 @@
         <div class="timeline-content">
           <h4>Research Scientist — Dept. of Biomedical Informatics, University of Utah</h4>
           <div class="period">Sep 2024 — Present · Salt Lake City, UT</div>
-          <p>CRISPR-based functional genomics, long-read sequencing, and single-cell technologies for epigenetic regulation of hematologic cancers.</p>
+          <p>CRISPR-based functional genomics, long-read sequencing, and single-cell technologies for epigenetic regulation of hematologic cancers. Pipeline development for methylation analysis, somatic variant annotation, and multi-omic data integration.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <section id="publications">
   <div class="container">
