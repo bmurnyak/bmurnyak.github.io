@@ -139,6 +139,28 @@
         <a href="https://github.com/bmurnyak/methylation-tissue-classifier" target="_blank" class="project-link">View on GitHub →</a>
       </div>
 
+      <div class="project-card">
+        <h4>Cancer Ancestry Genomics</h4>
+        <div class="subtitle">Pan-cancer equity analysis · TCGA MC3 · 1000 Genomes · plink2</div>
+        <p>Quantified racial representation bias across 11,160 TCGA patients (33 cancer types). Built 1000 Genomes Phase 3 PCA reference using plink2. Ancestry-stratified TMB analysis reveals significant differences in immunotherapy-relevant biomarkers across ancestries.</p>
+        <div class="finding">83.2% of TCGA patients are White/European (n=9,835)</div>
+        <div class="finding">Black/AA patients: higher TMB in BRCA (p=0.035) and LUAD (p=0.025)</div>
+        <div class="finding">1000 Genomes PCA: PC1=54.2%, clean continental separation</div>
+        <div class="finding">MC3 pan-cancer mutations: 3.6M variants, 10,279 samples</div>
+        <a href="https://github.com/bmurnyak/cancer-ancestry-genomics" target="_blank" class="project-link">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="project-card">
+        <h4>Germline Variant Calling Pipeline</h4>
+        <div class="subtitle">GATK4 Best Practices · Snakemake · BWA-MEM · MultiQC</div>
+        <p>Production-grade germline variant calling pipeline implementing GATK4 best practices with Snakemake workflow management. Fully configurable and reproducible via conda environment export.</p>
+        <div class="finding">213,510 variants called (212,644 SNPs, 866 indels)</div>
+        <div class="finding">98.2% PASS rate, 100% mapping rate</div>
+        <div class="finding">Full QC: FastQC, Picard metrics, samtools flagstat, MultiQC</div>
+        <div class="finding">BQSR using GIAB NA12878 high-confidence variants</div>
+        <a href="https://github.com/bmurnyak/germline-variant-pipeline" target="_blank" class="project-link">View on GitHub &rarr;</a>
+      </div>
+
     </div>
   </div>
 </section>
